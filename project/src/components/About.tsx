@@ -1,76 +1,38 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Award, BookOpen, Building2, Users } from 'lucide-react';
-
-const achievements = [
-  {
-    icon: <Building2 className="h-8 w-8 text-emerald-600" />,
-    number: "50+",
-    text: "Condomínios Administrados"
-  },
-  {
-    icon: <Users className="h-8 w-8 text-emerald-600" />,
-    number: "5000+",
-    text: "Moradores Atendidos"
-  },
-  {
-    icon: <Award className="h-8 w-8 text-emerald-600" />,
-    number: "15+",
-    text: "Anos de Experiência"
-  },
-  {
-    icon: <BookOpen className="h-8 w-8 text-emerald-600" />,
-    number: "20+",
-    text: "Certificações"
-  }
-];
 
 const About = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">Sobre Luis Carlos</h2>
-          <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
-            <div className="md:w-1/3">
-              <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="Luis Carlos"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="md:w-2/3 text-left">
-              <p className="text-lg text-gray-600 mb-6">
-                Com mais de 15 anos de experiência em gestão condominial, Luis Carlos é referência no mercado de administração de condomínios de alto padrão. Sua abordagem única combina expertise técnica com um olhar humanizado para as necessidades de cada comunidade.
+    <section id="sobre" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Sobre a ADMPLAN</h2>
+            <div className="space-y-6 text-gray-600">
+              <p>
+                A ADMPLAN é especializada em gestão condominial, consultoria para síndicos
+                e administração de condomínios. Oferecemos soluções completas para garantir
+                a eficiência e a valorização do seu patrimônio.
               </p>
-              <p className="text-lg text-gray-600">
-                Formado em Administração com especialização em Gestão Condominial, possui diversas certificações na área e está em constante atualização para oferecer as melhores soluções aos seus clientes.
+              <p>
+                Com anos de experiência no setor condominial, a ADMPLAN se consolidou como
+                referência em gestão profissional e personalizada. Nosso síndico profissional,
+                Luis Carlos, traz expertise e dedicação para cada condomínio que administramos.
+              </p>
+              <p>
+                Nossa missão é proporcionar tranquilidade e segurança aos condôminos, com
+                transparência, ética e eficiência. Valorizamos a confiança e o relacionamento
+                próximo com nossos clientes.
               </p>
             </div>
           </div>
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-4">{achievement.icon}</div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">{achievement.number}</h3>
-              <p className="text-gray-600">{achievement.text}</p>
-            </motion.div>
-          ))}
+          
+          <div className="mt-10 lg:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+              alt="Equipe ADMPLAN"
+              className="rounded-lg shadow-xl"
+            />
+          </div>
         </div>
       </div>
     </section>

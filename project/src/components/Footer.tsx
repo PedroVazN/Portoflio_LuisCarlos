@@ -1,67 +1,60 @@
 import React from 'react';
-import { Building2, Mail, Phone, Instagram, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Instagram, Linkedin, MessageCircle, Building2 } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo e Sobre */}
-          <div className="col-span-1">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Building2 className="h-8 w-8 text-emerald-500" />
-              <span className="text-xl font-bold text-white">Luis Carlos</span>
-            </Link>
-            <p className="text-sm">
-              Gestão profissional e personalizada para condomínios, focada em resultados e satisfação dos moradores.
+          <div className="space-y-4">
+            <div className="flex items-center">
+              <Building2 className="h-8 w-8 text-blue-500" />
+              <span className="ml-2 text-xl font-bold">ADMPLAN</span>
+            </div>
+            <p className="text-gray-400">
+              Gestão profissional e personalizada para o seu condomínio
             </p>
           </div>
 
-          {/* Links Rápidos */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><Link to="/sobre" className="hover:text-emerald-500 transition-colors">Sobre</Link></li>
-              <li><Link to="/servicos" className="hover:text-emerald-500 transition-colors">Serviços</Link></li>
-              <li><Link to="/portfolio" className="hover:text-emerald-500 transition-colors">Portfólio</Link></li>
-              <li><Link to="/contato" className="hover:text-emerald-500 transition-colors">Contato</Link></li>
+              <li><a href="#inicio" className="text-gray-400 hover:text-white">Início</a></li>
+              <li><a href="#sobre" className="text-gray-400 hover:text-white">Sobre Nós</a></li>
+              <li><a href="#servicos" className="text-gray-400 hover:text-white">Serviços</a></li>
+              <li><a href="#portfolio" className="text-gray-400 hover:text-white">Prédios</a></li>
+              <li><a href="#contato" className="text-gray-400 hover:text-white">Contato</a></li>
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>(11) 99999-9999</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>contato@luiscarlos.com.br</span>
-              </li>
+            <ul className="space-y-2 text-gray-400">
+              <li>(11) 1234-5678</li>
+              <li>contato@admplan.com.br</li>
+              <li>Av. Exemplo, 1000</li>
+              <li>São Paulo, SP</li>
             </ul>
           </div>
 
-          {/* Redes Sociais */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Redes Sociais</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-emerald-500 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-emerald-500 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white">
                 <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <MessageCircle className="h-6 w-6" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Luis Carlos Síndico Profissional. Todos os direitos reservados.
-          </p>
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>© 2024 ADMPLAN. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

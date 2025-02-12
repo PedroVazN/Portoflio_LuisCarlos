@@ -1,45 +1,36 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center">
+    <section id="inicio" className="relative h-screen">
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundImage: 'url("https://cdn1.valuegaia.com.br/gaiasite/30325/media/01073e78440fb8158e1922bfca6bc3b5-PHOTO-2019-09-04-11-24-36.jpg")',
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
-
-      <div className="container mx-auto px-4 z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-3xl"
-        >
+      
+      <div className="relative h-full flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Gestão profissional e personalizada para o seu condomínio
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl md:text-2xl text-white mb-8">
             Soluções eficientes para administração, manutenção e valorização do seu patrimônio
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-emerald-600 text-white px-8 py-3 rounded-md flex items-center space-x-2 hover:bg-emerald-700 transition-colors"
-          >
-            <span>Conheça Nossos Serviços</span>
-            <ArrowRight className="h-5 w-5" />
-          </motion.button>
-        </motion.div>
+          <div className="flex justify-center gap-4">
+            <button className="bg-blue-700 text-white px-8 py-3 rounded-md text-lg hover:bg-blue-800 transition-colors">
+              Conheça Nossos Serviços
+            </button>
+            <button className="bg-white text-blue-700 px-8 py-3 rounded-md text-lg hover:bg-gray-100 transition-colors">
+              Saiba Mais
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

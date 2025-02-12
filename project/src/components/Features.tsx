@@ -1,25 +1,24 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, Shield, HeartHandshake, Laptop } from 'lucide-react';
+import { Shield, UserCheck, LineChart, Building2 } from 'lucide-react';
 
 const features = [
   {
-    icon: <Sparkles className="h-8 w-8 text-emerald-600" />,
+    icon: Shield,
     title: 'Transparência na Gestão',
     description: 'Prestação de contas clara e detalhada para todos os condôminos.'
   },
   {
-    icon: <Shield className="h-8 w-8 text-emerald-600" />,
+    icon: UserCheck,
     title: 'Experiência Comprovada',
-    description: 'Anos de experiência na administração de condomínios de alto padrão.'
+    description: 'Anos de expertise em administração de condomínios.'
   },
   {
-    icon: <HeartHandshake className="h-8 w-8 text-emerald-600" />,
+    icon: Building2,
     title: 'Atendimento Personalizado',
-    description: 'Suporte dedicado e atendimento humanizado para cada condomínio.'
+    description: 'Soluções adaptadas às necessidades específicas do seu condomínio.'
   },
   {
-    icon: <Laptop className="h-8 w-8 text-emerald-600" />,
+    icon: LineChart,
     title: 'Tecnologia e Inovação',
     description: 'Sistemas modernos para uma gestão eficiente e transparente.'
   }
@@ -28,34 +27,26 @@ const features = [
 const Features = () => {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Diferenciais</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Conheça os pilares que fazem nossa gestão condominial ser referência no mercado
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900">Nossos Diferenciais</h2>
+          <p className="mt-4 text-xl text-gray-600">
+            Compromisso com a excelência em cada aspecto da gestão condominial
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+              <feature.icon className="h-12 w-12 text-blue-700 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
               <p className="text-gray-600">{feature.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
