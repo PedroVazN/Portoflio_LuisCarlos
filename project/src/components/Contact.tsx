@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contato" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900">Entre em Contato</h2>
+          <h2  className="text-3xl font-bold text-gray-900">Entre em Contato</h2>
           <p className="mt-4 text-xl text-gray-600">
             Estamos prontos para atender às suas necessidades
           </p>
@@ -76,16 +76,16 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-blue-700" />
-                  <span className="ml-3 text-gray-600">(11) 1234-5678</span>
+                  <a href='wa.me/11993782833' className="ml-3 text-gray-600">(11) 99378-2833 </a>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-blue-700" />
-                  <span className="ml-3 text-gray-600">contato@admplan.com.br</span>
+                  <span className="ml-3 text-gray-600">luiscampoos@admplanimoveis.com.br</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-blue-700" />
                   <span className="ml-3 text-gray-600">
-                    Av. Exemplo, 1000 - São Paulo, SP
+                  Rua Santa Cruz, 722 - Sala 606 - Vila Mariana - São Paulo/SP
                   </span>
                 </div>
               </div>
