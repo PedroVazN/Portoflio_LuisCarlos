@@ -1,27 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Building2, Users } from 'lucide-react';
+import { Award, BookOpen, Building2, Users, GraduationCap, Briefcase } from 'lucide-react';
 
 const achievements = [
   {
     icon: <Building2 className="h-8 w-8 text-blue-600" />,
-    number: "6+",
+    number: "50+",
     text: "Condomínios Administrados"
   },
   {
     icon: <Users className="h-8 w-8 text-blue-600" />,
-    number: "1000+",
+    number: "5000+",
     text: "Moradores Atendidos"
   },
   {
     icon: <Award className="h-8 w-8 text-blue-600" />,
-    number: "30+",
+    number: "15+",
     text: "Anos de Experiência"
   },
   {
     icon: <BookOpen className="h-8 w-8 text-blue-600" />,
-    number: "5+",
+    number: "20+",
     text: "Certificações"
+  }
+];
+
+const education = [
+  {
+    period: "1999 - 2003",
+    degree: "Direito",
+    institution: "Universidade Paulista",
+    skills: "Desenvolvimento de negócios · Administração de escritórios · Análise financeira"
+  },
+  {
+    period: "1993 - 1997",
+    degree: "Bacharelado em Administração, Finanças",
+    institution: "Universidade Paulista",
+    skills: "Gestão Financeira · Administração"
+  },
+  {
+    period: "1990 - 1994",
+    degree: "Bacharelado em Direito, Gestão Imobiliária",
+    institution: "Universidade Paulista",
+    skills: "Direito Imobiliário · Gestão de Propriedades"
   }
 ];
 
@@ -84,6 +105,43 @@ const Luis = () => {
                 Formado em Administração com especialização em Gestão Condominial, possui diversas certificações na área e está em constante atualização para oferecer as melhores soluções aos seus clientes.
               </motion.p>
             </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+            <GraduationCap className="inline-block h-8 w-8 text-blue-600 mr-2 mb-1" />
+            Formação Acadêmica
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-600"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-50 rounded-full p-2">
+                    <Briefcase className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <span className="ml-2 text-blue-600 font-medium">{edu.period}</span>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">{edu.degree}</h4>
+                <p className="text-blue-700 font-medium mb-3">{edu.institution}</p>
+                <p className="text-gray-600 text-sm">
+                  <span className="font-medium">Competências:</span> {edu.skills}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
