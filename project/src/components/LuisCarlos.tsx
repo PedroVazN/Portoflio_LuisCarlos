@@ -55,58 +55,52 @@ const Luis = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-7xl mx-auto mb-16"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-block"
-            >
-              Sobre <span className="text-blue-600">Luis Carlos</span>
-            </motion.span>
+          <h2 className="text-4xl font-bold text-gray-800">
+            <span className="text-blue-600">Luis Carlos</span>
           </h2>
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="md:w-1/3 order-2 md:order-1"
-            >
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-blue-100 rounded-lg transform -rotate-2 transition-transform group-hover:rotate-1"></div>
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Luis Carlos"
-                  className="relative rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform group-hover:scale-105"
-                />
-              </div>
-            </motion.div>
-            <div className="md:w-2/3 text-left order-1 md:order-2">
-              <motion.p
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg text-gray-700 leading-relaxed mb-6"
-              >
-                Com mais de 15 anos de experiência em gestão condominial, Luis Carlos é referência no mercado de administração de condomínios de alto padrão. Sua abordagem única combina expertise técnica com um olhar humanizado para as necessidades de cada comunidade.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg text-gray-700 leading-relaxed"
-              >
-                Formado em Administração com especialização em Gestão Condominial, possui diversas certificações na área e está em constante atualização para oferecer as melhores soluções aos seus clientes.
-              </motion.p>
-            </div>
-          </div>
+          <p className="mt-2 text-lg text-gray-600">Síndico Profissional & Gestor de Condomínios</p>
         </motion.div>
+
+        <div className="flex flex-col lg:flex-row gap-8 items-start mb-16">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:w-1/2 relative"
+          >
+            <div className="aspect-w-4 aspect-h-5 relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg transform -rotate-1"></div>
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Luis Carlos"
+                className="relative rounded-lg shadow-2xl object-cover w-full h-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:w-1/2 space-y-6"
+          >
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-600 mb-4">Experiência & Expertise</h3>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Com mais de 30 anos de experiência em gestão condominial, Luis Carlos é referência no mercado de administração de condomínios de alto padrão. Sua abordagem única combina expertise técnica com um olhar humanizado para as necessidades de cada comunidade.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Formado em Administração com especialização em Gestão Imobiliária, possui diversas certificações na área e está em constante atualização para oferecer as melhores soluções aos seus clientes.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -115,9 +109,9 @@ const Luis = () => {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            <GraduationCap className="inline-block h-8 w-8 text-blue-600 mr-2 mb-1" />
-            Formação Acadêmica
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center">
+            <GraduationCap className="h-8 w-8 text-blue-600 mr-2" />
+            <span>Formação Acadêmica</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {education.map((edu, index) => (
@@ -145,7 +139,7 @@ const Luis = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
@@ -153,7 +147,7 @@ const Luis = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <motion.div 
                 className="flex justify-center mb-4"

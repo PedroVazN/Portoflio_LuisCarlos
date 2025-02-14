@@ -82,7 +82,7 @@ const About = () => {
           >
             <div className="absolute -inset-4 bg-blue-100 rounded-lg transform rotate-2 transition-transform group-hover:rotate-3"></div>
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+              src="https://github.com/PedroVazN/Portoflio_LuisCarlos/blob/main/project/src/images/escritorio2.jpg?raw=true"
               alt="Equipe ADNPLAM"
               className="relative rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300"
             />

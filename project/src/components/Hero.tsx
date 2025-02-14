@@ -6,7 +6,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://cdn1.valuegaia.com.br/gaiasite/30325/media/01073e78440fb8158e1922bfca6bc3b5-PHOTO-2019-09-04-11-24-36.jpg")',
+          backgroundImage: 'url("https://github.com/PedroVazN/Portoflio_LuisCarlos/blob/main/project/src/images/banner.png?raw=true")',
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>

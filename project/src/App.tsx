@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Shield, UserCheck, LineChart, Phone } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -10,23 +10,31 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Luis from './components/LuisCarlos';
+import PropertyDetails from './pages/PropertyDetails';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <About />
-        <Luis />
-        <Portfolio />
-        <Services />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <Hero />
+              <Features />
+              <About />
+              <Luis />
+              <Portfolio />
+              <Services />
+              <Testimonials />
+              <Contact />
+            </main>
+          } />
+          <Route path="/portfolio/:id" element={<PropertyDetails />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
