@@ -74,7 +74,7 @@ const Luis = () => {
             <div className="aspect-w-4 aspect-h-5 relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg transform -rotate-1"></div>
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                src="https://github.com/PedroVazN/Portoflio_LuisCarlos/blob/main/project/src/images/luiscarlos.png?raw=true"
                 alt="Luis Carlos"
                 className="relative rounded-lg shadow-2xl object-cover w-full h-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl"
               />

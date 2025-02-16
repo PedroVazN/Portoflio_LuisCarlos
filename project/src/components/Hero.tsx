@@ -24,7 +24,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
           style={{
-            backgroundImage: 'url("https://github.com/PedroVazN/Portoflio_LuisCarlos/blob/main/project/src/images/banner.png?raw=true")',
+            backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipOH4Si9wSl2L62jlwqDtm9ggS6OOYpKWGjm7RS3=s1360-w1360-h1020")',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />

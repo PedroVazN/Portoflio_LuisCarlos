@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-blue-700" />
-                  <span className="ml-3 text-gray-600">luiscampoos@admplanimoveis.com.br</span>
+                  <span className="ml-3 text-gray-600">luiscampos@admplanimoveis.com.br</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-blue-700" />
