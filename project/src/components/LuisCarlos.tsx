@@ -5,22 +5,22 @@ import { Award, BookOpen, Building2, Users, GraduationCap, Briefcase } from 'luc
 const achievements = [
   {
     icon: <Building2 className="h-8 w-8 text-blue-600" />,
-    number: "50+",
+    number: "10+",
     text: "Condomínios Administrados"
   },
   {
     icon: <Users className="h-8 w-8 text-blue-600" />,
-    number: "5000+",
+    number: "1000+",
     text: "Moradores Atendidos"
   },
   {
     icon: <Award className="h-8 w-8 text-blue-600" />,
-    number: "15+",
+    number: "30+",
     text: "Anos de Experiência"
   },
   {
     icon: <BookOpen className="h-8 w-8 text-blue-600" />,
-    number: "20+",
+    number: "5+",
     text: "Certificações"
   }
 ];
@@ -92,7 +92,10 @@ const Luis = () => {
               <h3 className="text-2xl font-bold text-blue-600 mb-4">Experiência & Expertise</h3>
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Com mais de 30 anos de experiência em gestão condominial, Luis Carlos é referência no mercado de administração de condomínios de alto padrão. Sua abordagem única combina expertise técnica com um olhar humanizado para as necessidades de cada comunidade.
+                  Com mais de 30 anos de experiência em gestão condominial, Luis Carlos é referência no mercado de administração de condomínios de alto 
+                  padrão. Luis é Socio Administrador e Sócio na Acoplan Administracao de Bens Proprios Ltda, especializada em Compra 
+                  e venda de imóveis próprios. Também é Socio Administrador
+                   e Sócio na Admplan Negocios Imobiliarios e Gestao Condominial, cuja atuação é de Corretagem na compra e venda e avaliação de imóveis
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Formado em Administração com especialização em Gestão Imobiliária, possui diversas certificações na área e está em constante atualização para oferecer as melhores soluções aos seus clientes.

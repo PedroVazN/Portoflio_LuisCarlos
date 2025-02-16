@@ -44,7 +44,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Sobre a <span className="text-blue-600">ADNPLAM</span>
+                Sobre a <span className="text-blue-600">ADMPLAN</span>
               </h2>
               <div className="space-y-6">
                 <motion.p
@@ -54,7 +54,7 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg text-gray-700 leading-relaxed"
                 >
-                  A Admplan Imóveis tem a experiência de profissionais com ampla bagagem no setor imobiliário, 
+                  A Admplan Imóveis (Administrada por Luis Carlos) tem a experiência de profissionais com ampla bagagem no setor imobiliário, 
                   comprometidos em fazer com que nossos clientes fechem bons negócios, entendendo suas necessidades 
                   e buscando as melhores oportunidades no mercado.
                 </motion.p>
